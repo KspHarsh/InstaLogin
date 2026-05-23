@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ====== Reset & Base ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+  color: #262626;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ====== Main Container ====== */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+/* ====== Login Box ====== */
+.login-box {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 1px;
+  padding: 40px 40px 20px;
+  width: 350px;
+  text-align: center;
+}
+
+/* ====== Instagram Logo ====== */
+.logo-container {
+  margin-bottom: 12px;
+}
+
+.instagram-logo {
+  margin-bottom: 16px;
+  line-height: 0;
+}
+
+.logo-img {
+  width: 175px;
+  height: auto;
+}
+
+/* ====== Form Inputs ====== */
+.input-group {
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 16px 2px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background: #fafafa;
+  font-size: 12px;
+  line-height: 18px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  height: 38px;
+}
+
+.input-group input:focus {
+  border-color: #a8a8a8;
+}
+
+.input-group label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #8e8e8e;
+  pointer-events: none;
+  transition: all 0.1s ease;
+  transform-origin: left;
+}
+
+.input-group input:focus + label,
+.input-group input.has-value + label {
+  top: 10px;
+  transform: translateY(0);
+  font-size: 10px;
+  color: #8e8e8e;
+}
+
+.input-group input:focus,
+.input-group input.has-value {
+  padding: 14px 16px 2px;
+  font-size: 12px;
+}
+
+/* Show/Hide Password */
+.show-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #262626;
+  cursor: pointer;
+  display: none;
+}
+
+.show-password:hover {
+  color: #8e8e8e;
+}
+
+/* ====== Login Button ====== */
+.login-btn {
+  width: 100%;
+  padding: 7px 16px;
+  background: #4cb5f9;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 14px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn.active {
+  opacity: 1;
+  background: #0095f6;
+}
+
+.login-btn.active:hover {
+  background: #1877f2;
+}
+
+.login-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Loader spinner */
+.btn-loader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ====== Divider ====== */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 18px;
+}
+
+.divider .line {
+  flex: 1;
+  height: 1px;
+  background: #dbdbdb;
+}
+
+.divider span {
+  padding: 0 18px;
+  color: #8e8e8e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ====== Facebook Login ====== */
+.fb-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #385185;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.fb-login:hover {
+  color: #00376b;
+}
+
+/* ====== Forgot Password ====== */
+.forgot-password {
+  display: block;
+  color: #00376b;
+  font-size: 12px;
+  text-decoration: none;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.forgot-password:hover {
+  color: #00376b;
+}
+
+/* ====== Sign Up Box ====== */
+.signup-box {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 1px;
+  padding: 20px 40px;
+  width: 350px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.signup-box p {
+  font-size: 14px;
+  color: #262626;
+}
+
+.signup-box a {
+  color: #0095f6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ====== Get the App ====== */
+.get-app {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.get-app p {
+  font-size: 14px;
+  color: #262626;
+  margin-bottom: 16px;
+}
+
+.app-stores {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.app-stores img {
+  height: 40px;
+}
+
+/* ====== Footer ====== */
+.footer {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: auto auto 44px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  color: #8e8e8e;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-bottom select {
+  border: none;
+  background: none;
+  color: #8e8e8e;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+.footer-bottom span {
+  color: #8e8e8e;
+  font-size: 12px;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 450px) {
+  .login-box,
+  .signup-box {
+    border: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 16px;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .main-container {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
